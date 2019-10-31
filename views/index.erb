@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>40k Counter</title>
+    <link href="/css/layout.css" rel="stylesheet">
+    <script src="js/counter.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="center" id="turn">
+        <p>Turn</p>
+        <button type="button" id="minus" onClick="modifyCounter(this.id, 'turn')">-</button>
+        <p ><a id="turn_amount">0</a></p>
+        <button type="button" id="plus" onClick="modifyCounter(this.id, 'turn')">+</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="center" id="command">
+        <p>Command Points</p>
+        <button type="button" id="minus" onClick="modifyCounter(this.id, 'cp')">-</button>
+        <p><a id="cp_amount">0</a></p>
+        <button type="button" id="plus" onClick="modifyCounter(this.id, 'cp')">+</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="center" id="victory">
+        <p>Victory Points</p>
+        <button type="button" id="minus" onClick="modifyCounter(this.id, 'vp')">-</button>
+        <p><a id="vp_amount">0</a></p>
+        <button type="button" id="plus" onClick="modifyCounter(this.id, 'vp')">+</button>
+      </div>
+    </div>
+    <div class="container">
+      <div class="center" id="faith">
+        <p>Faith Points</p>
+        <button type="button" id="minus" onClick="modifyCounter(this.id, 'fp')">-</button>
+        <p><a id="fp_amount">0</a></p>
+        <button type="button" id="plus" onClick="modifyCounter(this.id, 'fp')">+</button>
+      </div>
+    </div>
+  </body>
+</html>
