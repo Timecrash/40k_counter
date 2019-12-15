@@ -7,37 +7,15 @@
     <script src="js/counter.js"></script>
   </head>
   <body>
+<% %w[turn cp vp fp].each do |counter| %>
     <div class="container">
-      <div class="center" id="turn">
-        <h3>Turn</h3>
-        <button class="button" id="minus" onClick="modifyCounter(this.id, 'turn')">-</button>
-        <p ><a id="turn_amount">0</a></p>
-        <button class="button" id="plus" onClick="modifyCounter(this.id, 'turn')">+</button>
+      <div class="center" id="<%= counter %>">
+        <h3><%= counter.upcase %></h3>
+        <button class="button" id="minus" onClick="modifyCounter(this.id, '<%= counter %>')">-</button>
+        <p><a id="<%= counter %>_amount">0</a></p>
+        <button class="button" id="plus" onClick="modifyCounter(this.id, '<%= counter %>')">+</button>
       </div>
     </div>
-    <div class="container">
-      <div class="center" id="command">
-        <h3>Command Points</h3>
-        <button class="button" id="minus" onClick="modifyCounter(this.id, 'cp')">-</button>
-        <p><a id="cp_amount">0</a></p>
-        <button class="button" id="plus" onClick="modifyCounter(this.id, 'cp')">+</button>
-      </div>
-    </div>
-    <div class="container">
-      <div class="center" id="victory">
-        <h3>Victory Points</h3>
-        <button class="button" id="minus" onClick="modifyCounter(this.id, 'vp')">-</button>
-        <p><a id="vp_amount">0</a></p>
-        <button class="button" id="plus" onClick="modifyCounter(this.id, 'vp')">+</button>
-      </div>
-    </div>
-    <div class="container">
-      <div class="center" id="faith">
-        <h3>Faith Points</h3>
-        <button class="button" id="minus" onClick="modifyCounter(this.id, 'fp')">-</button>
-        <p><a id="fp_amount">0</a></p>
-        <button class="button" id="plus" onClick="modifyCounter(this.id, 'fp')">+</button>
-      </div>
-    </div>
+<% end %>
   </body>
 </html>
